@@ -1,6 +1,6 @@
 # URL Shortener Project
 
-A simple URL shortener built with **Spring Boot, JPA, and PostgreSQL**. It allows users to shorten URLs, customize short codes, and redirect to original links.
+A simple URL shortener built with **Spring Boot, JPA, and PostgreSQL**. It allows users to shorten URLs, customize short codes, and redirect to original links. The backend is **hosted on Railway**.
 
 ## 🚀 Features
 - Generate a **short URL** for any long URL.
@@ -8,6 +8,7 @@ A simple URL shortener built with **Spring Boot, JPA, and PostgreSQL**. It allow
 - **Automatic redirection** when visiting a short URL.
 - **Persistent storage** using PostgreSQL.
 - **RESTful API** for easy integration.
+- **Deployed on Railway** for cloud hosting.
 
 ## 🛠️ Installation & Setup
 
@@ -44,29 +45,35 @@ mvn spring-boot:run
 
 The application will start at **`http://localhost:8080`**.
 
+## 🚀 Hosted Version
+The backend is **deployed on Railway** and available at:
+```
+https://urlshortener-anoops.up.railway.app
+```
+
 ## 🚀 API Usage
 
 ### 🔹 Shorten a URL
 ```sh
-curl -X POST "http://localhost:8080/api/api/shorten?LongUrl=https://www.google.com"
+curl -X POST "https://urlshortener-anoops.up.railway.app/api/shorten?longUrl=https://www.google.com"
 ```
 📌 **Response:**
 ```json
-{"shortUrl": "http://localhost:8080/api/abc123"}
+{"shortUrl": "https://urlshortener-anoops.up.railway.app/api/abc123"}
 ```
 
 ### 🔹 Custom Short URL
 ```sh
-curl -X POST "http://localhost:8080/api/api/shorten?LongUrl=https://www.google.com&customNameUrl=myGoogle"
+curl -X POST "https://urlshortener-anoops.up.railway.app/api/shorten?longUrl=https://www.google.com&customShortCode=myGoogle"
 ```
 📌 **Response:**
 ```json
-{"shortUrl": "http://localhost:8080/api/myGoogle"}
+{"shortUrl": "https://urlshortener-anoops.up.railway.app/api/myGoogle"}
 ```
 
 ### 🔹 Redirect to Original URL
 ```sh
-curl -i "http://localhost:8080/api/abc123"
+curl -i "https://urlshortener-anoops.up.railway.app/api/abc123"
 ```
 📌 **Response:**
 ```
@@ -80,6 +87,7 @@ Location: https://www.google.com
 - **PostgreSQL** - Database
 - **Maven** - Dependency Management
 - **Lombok** - Reduces boilerplate code
+- **Railway** - Cloud hosting platform
 
 ## 📜 License
 This project is **open-source** and available under the [MIT License](LICENSE).
