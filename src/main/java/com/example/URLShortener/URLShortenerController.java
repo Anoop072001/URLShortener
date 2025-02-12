@@ -18,7 +18,7 @@ public class URLShortenerController {
 
         try{
             String shortUrl = urlService.shortenURL(LongUrl, customNameUrl);
-            return ResponseEntity.ok("Short URL: http://localhost:8080/api/"+shortUrl);
+            return ResponseEntity.ok("Short URL: https://urlshortener-anoops.up.railway.app/api/"+shortUrl);
         }
         catch(Exception e){
             return ResponseEntity.badRequest().body(e.getMessage());
