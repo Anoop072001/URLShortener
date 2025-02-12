@@ -55,7 +55,7 @@ https://urlshortener-anoops.up.railway.app
 
 ### 🔹 Shorten a URL
 ```sh
-curl -X POST "https://urlshortener-anoops.up.railway.app/api/shorten?longUrl=https://www.google.com"
+curl -X POST "https://urlshortener-anoops.up.railway.app/api/shorten?LongUrl=https://www.google.com"
 ```
 📌 **Response:**
 ```json
@@ -64,7 +64,7 @@ curl -X POST "https://urlshortener-anoops.up.railway.app/api/shorten?longUrl=htt
 
 ### 🔹 Custom Short URL
 ```sh
-curl -X POST "https://urlshortener-anoops.up.railway.app/api/shorten?longUrl=https://www.google.com&customShortCode=myGoogle"
+curl -X POST "https://urlshortener-anoops.up.railway.app/api/shorten?LongUrl=https://www.google.com&customNameUrl=myGoogle"
 ```
 📌 **Response:**
 ```json
