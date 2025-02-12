@@ -13,23 +13,27 @@ A simple URL shortener built with **Spring Boot, JPA, and PostgreSQL**. It allow
 
 ### 1️⃣ Clone the Repository
 ```sh
-git clone https://github.com/yourusername/url-shortener.git
+git clone https://github.com/Anoop072001/URLShortener.git
 cd url-shortener
 ```
 
 ### 2️⃣ Configure the Database
 Ensure PostgreSQL is installed and running. Then, create a database:
 ```sh
-psql -U postgres -c "CREATE DATABASE url_shortener_db;"
+psql -U postgres -c "CREATE DATABASE urlshortener;"
 ```
 
 ### 3️⃣ Update `application.properties`
 Edit `src/main/resources/application.properties` to match your PostgreSQL credentials:
 ```properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/url_shortener_db
-spring.datasource.username=postgres
-spring.datasource.password=yourpassword
-spring.jpa.hibernate.ddl-auto=update
+spring.application.name=URLShortener
+spring.datasource.url=jdbc:postgresql://localhost:5432/urlshortener
+spring.datasource.username=
+spring.datasource.password=
+spring.jpa.hibernate.ddl-auto=create-drop
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+spring.jpa.properties.hibernate.format_sql=true
 ```
 
 ### 4️⃣ Build & Run the Project
