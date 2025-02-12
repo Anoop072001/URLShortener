@@ -100,7 +100,7 @@ This project is **open-source** and available under the [MIT License](LICENSE).
 5. **Create a Pull Request** 🚀
 
 ## 📧 Contact
-For any issues, please open an **[Issue](https://github.com/yourusername/url-shortener/issues)** or reach out via email.
+For any issues, please open an **[Issue](https://github.com/Anoop072001/URLShortener/issues)** or reach out via email.
 
 ---
 🔥 **Enjoy coding!** 🚀
