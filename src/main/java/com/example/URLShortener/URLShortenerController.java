@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api")
 public class URLShortenerController {
@@ -18,7 +19,7 @@ public class URLShortenerController {
 
         try{
             String shortUrl = urlService.shortenURL(LongUrl, customNameUrl);
-            return ResponseEntity.ok("Short URL: https://urlshortener-anoops.up.railway.app/api/"+shortUrl);
+            return ResponseEntity.ok("https://urlshortener-anoops.up.railway.app/api/"+shortUrl);
         }
         catch(Exception e){
             return ResponseEntity.badRequest().body(e.getMessage());
